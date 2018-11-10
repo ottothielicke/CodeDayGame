@@ -1,3 +1,3 @@
 # CodeDayGame
 Yoinkus Maximum yknow
-Code Game Day
+Code Day Game
