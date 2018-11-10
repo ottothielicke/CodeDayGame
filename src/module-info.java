@@ -6,4 +6,5 @@
  *
  */
 module CodeDayGame {
+	requires java.desktop;
 }
