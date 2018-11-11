@@ -8,14 +8,12 @@ public class KeyListener implements KeyEventListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		//stop
 		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
-		System.out.println(e);
 		if (keyCode == KeyEvent.VK_W) { //player one movement
 			PlayerOne.VelY = -2; 
 		} else if (keyCode == KeyEvent.VK_S) {
@@ -47,7 +45,6 @@ public class KeyListener implements KeyEventListener{
 		} else if (keyCode == KeyEvent.VK_A || keyCode == KeyEvent.VK_D) {
 			PlayerOne.VelX = 0;
 		}
-		
 		if (keyCode == KeyEvent.VK_UP || keyCode == KeyEvent.VK_DOWN) { //stopping player two movement
 			PlayerTwo.VelY = 0;
 		} else if (keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_RIGHT) {
