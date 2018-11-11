@@ -11,9 +11,12 @@ import main.characters.projectiles.ProjectileOne;
 public class MainPanel extends JPanel{
 	public static boolean MouseEvent = false;
 	public static JPanel panel = new JPanel();
+	public static boolean drawProjectileOne = false;
 	public void paintComponent(Graphics g) { //gets invoked when the constructor is called
 		PlayerOne.paintComponent(g); 
 		PlayerTwo.paintComponent(g);
-		ProjectileOne.drawProjectile(g);
+		if(drawProjectileOne) {
+			ProjectileOne.drawProjectile(g);
+		}
 	}
 }
