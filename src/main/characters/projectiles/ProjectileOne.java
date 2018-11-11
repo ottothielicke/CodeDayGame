@@ -8,8 +8,8 @@ import javax.swing.JFrame;
 import main.frames.GameFrame;
 
 public class ProjectileOne {
-	public static int PROJECTILE_X;
-	public static int PROJECTILE_Y;
+	public static int PROJECTILE_X = 500;
+	public static int PROJECTILE_Y = 500;
 	public static int PROJECTILE_VELOCITY_X = 0;
 	public static int PROJECTILE_VELOCITY_Y = 0;
 	public static void drawProjectile(Graphics g) {
