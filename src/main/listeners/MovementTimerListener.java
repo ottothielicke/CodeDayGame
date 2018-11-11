@@ -8,7 +8,7 @@ import main.characters.PlayerOne;
 import main.characters.PlayerTwo;
 import main.frames.GameFrame;
 
-public class TimerListener implements ActionListener{
+public class MovementTimerListener implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -16,8 +16,8 @@ public class TimerListener implements ActionListener{
 		PlayerOne.Y += PlayerOne.VelY;
 		PlayerTwo.X += PlayerTwo.VelX;
 		PlayerTwo.Y += PlayerTwo.VelY;
-		JFrame yoink = GameFrame.frame;
-		yoink.repaint();
+		JFrame frame = GameFrame.frame;
+		frame.repaint();
 	}
 
 }

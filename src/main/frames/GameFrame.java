@@ -1,13 +1,12 @@
 package main.frames;
 
-import java.awt.Graphics;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import main.frames.containers.MainPanel;
 import main.listeners.*;
 import main.timer.PlayerMovementTimer;
+import main.timer.ProjectileMovementTimer;
 @SuppressWarnings("serial")
 public class GameFrame extends JFrame {
 	public static JFrame frame = new JFrame("Game Window");
@@ -20,10 +19,10 @@ public class GameFrame extends JFrame {
 		frame.setResizable(false);
 		
 		frame.add(panel);
-		Graphics graphics = panel.getGraphics();
-		System.out.println(graphics); //Testing graphics object details
-		System.out.println(graphics); //more testing
+		frame.addMouseListener(new MouseEventListeners());
 		PlayerMovementTimer movementtimer = new PlayerMovementTimer();
 		movementtimer.startTimer();
+		ProjectileMovementTimer projectilemovementtimer = new ProjectileMovementTimer();
+		projectilemovementtimer.startTimer();
 	}
 }
