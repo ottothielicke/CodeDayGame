@@ -20,6 +20,9 @@ public class ButtonListeners implements ActionListener {
 			});
 			Launcher.close();
 		}
+		if(e.getSource() == Launcher.set) {
+			Launcher.setVariables();
+		}
 		
 	}
 	
