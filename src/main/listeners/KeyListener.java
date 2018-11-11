@@ -19,6 +19,10 @@ public class KeyListener implements KeyEventListener{
 	public static boolean keyW = true;
 	public static boolean keyS = true;
 	public static boolean keyD = true;
+	public static boolean key8 = true;
+	public static boolean key6 = true;
+	public static boolean key4 = true;
+	public static boolean key2 = true;
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
