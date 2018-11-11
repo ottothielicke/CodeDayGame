@@ -8,9 +8,7 @@ public class PlayerTwo {
 	public static int VelX = 0;
 	public static int Y = 50;
 	public static int VelY = 0;
-	public static int CIRCLE_CENTER_X = X + 12;
-	public static int CIRCLE_CENTER_Y = Y + 12;
-	
+
 	public static void paintComponent(Graphics g) { //invoked on class construction
 		
 		g.setColor(Color.BLUE);

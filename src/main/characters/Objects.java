@@ -8,6 +8,7 @@ public class Objects {
 	public static int x = 1200 - 2 * lengthFromSide; //frame of calculations horz
 	public static int y = 800 - 2 * lengthFromSide; //frame of calcs vert
 	public static int[] objLocations = new int[48];
+	
 	public static int LineObj1X1 = 0;
 	public static int LineObj1X2 = 0;
 	public static int LineObj1Y1 = 0;
@@ -123,52 +124,58 @@ public class Objects {
 		LineObj1X1 = positionL;
 		LineObj1X2 = positionL + length;
 		LineObj1Y1 = positionH;
-		LineObj1Y2 = positionH - height;
-		g.setColor(Color.BLUE);
+		LineObj1Y2 = positionH + height;
+		
+		
+		
+		g.setColor(Color.RED);
 		g.fillRect(x - positionL - length, positionH, length, height);
 		LineObj2X1 = x - positionL - length;
 		LineObj2X2 = x - positionL - length + length;
 		LineObj2Y1 = positionH;
-		LineObj2Y2 = positionH - height;
+		LineObj2Y2 = positionH + height;
+		
+		
 		
 		//second obj and reflection obj
+		g.setColor(Color.BLUE);
 		g.fillRect(positionL2, positionH2, length2, height2);
 		LineObj3X1 = positionL2;
 		LineObj3X2 = positionL2 + length2;
 		LineObj3Y1 = positionH2;
-		LineObj3Y2 = positionH2 - height2;
+		LineObj3Y2 = positionH2 + height2;
 		
 		g.fillRect(x - positionL2 - length2, positionH2, length2, height2);
 		LineObj4X1 = x - positionL2 - length2;
 		LineObj4X2 = x - positionL2 - length2 + length2;
 		LineObj4Y1 = positionH2;
-		LineObj4Y2 = positionH2 - height2;
+		LineObj4Y2 = positionH2 + height2;
 		
 		//third obj and reflection obj
 		g.fillRect(positionL3, positionH3, length3, height3);
 		LineObj5X1 = positionL3;
 		LineObj5X2 = positionL3 + length3;
 		LineObj5Y1 = positionH3;
-		LineObj5Y2 = positionH3 - height3;
+		LineObj5Y2 = positionH3 + height3;
 				
 		g.fillRect(x - positionL3 - length3, positionH3, length3, height3);
 		LineObj6X1 = x - positionL3 - length3;
 		LineObj6X2 = x - positionL3 - length3 + length3;
 		LineObj6Y1 = positionH3;
-		LineObj6Y2 = positionH3 - height3;
+		LineObj6Y2 = positionH3 + height3;
 		
 		//4th obj and reflection obj
 		g.fillRect(positionL4, positionH4, length4, height4);
 		LineObj7X1 = positionL4;
 		LineObj7X2 = positionL4 + length4;
 		LineObj7Y1 = positionH4;
-		LineObj7Y2 = positionH4 - height4;
+		LineObj7Y2 = positionH4 + height4;
 			
 		g.fillRect(x - positionL4 - length4, positionH4, length4, height4);
 		LineObj8X1 = x - positionL4 - length4;
 		LineObj8X2 = x - positionL4 - length4 + length4;
 		LineObj8Y1 = positionH4;
-		LineObj8Y2 = positionH4 - height4;
+		LineObj8Y2 = positionH4 + height4;
 		
 		//5th obj and reflection obj
 		g.fillRect(positionL5, positionH5, length5, height5);
@@ -181,19 +188,20 @@ public class Objects {
 		LineObj10X1 = x - positionL5 - length5;
 		LineObj10X2 = x - positionL5 - length5 + length5;
 		LineObj10Y1 = positionH5;
-		LineObj10Y2 = positionH5 - height5;
+		LineObj10Y2 = positionH5 + height5;
 		
 		//6th obj and reflection obj
 		g.fillRect(positionL6, positionH6, length6, height6);
 		LineObj11X1 = positionL6;
 		LineObj11X2 = positionL6 + length6;
 		LineObj11Y1 = positionH6;
-		LineObj11Y2 = positionH6 - height6;
+		LineObj11Y2 = positionH6 + height6;
 				
 		g.fillRect(x - positionL6 - length6, positionH6, length6, height6);
 		LineObj12X1 = x - positionL6 - length6;
 		LineObj12X2 = x - positionL6 - length6 + length6;
 		LineObj12Y1 = positionH6;
-		LineObj12Y2 = positionH6 - height6;
+		LineObj12Y2 = positionH6 + height6;
+		
 	}
 }

@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import main.characters.Objects;
 import main.characters.PlayerOne;
 import main.characters.PlayerTwo;
+import main.characters.healthbars.HealthBarOne;
+import main.characters.healthbars.HealthBarTwo;
 import main.characters.projectiles.ProjectileOne;
 import main.characters.projectiles.ProjectileTwo;
 @SuppressWarnings("serial")
@@ -25,5 +27,7 @@ public class MainPanel extends JPanel{
 		if(drawProjectileTwo) {
 			ProjectileTwo.drawProjectile(g);
 		}
+		HealthBarOne.paintComponent(g);
+		HealthBarTwo.paintComponent(g);
 	}
 }
