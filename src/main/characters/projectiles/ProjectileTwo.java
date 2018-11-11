@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 import main.frames.GameFrame;
 
-public class ProjectileOne {
+public class ProjectileTwo {
 	public static int PROJECTILE_X = 500;
 	public static int PROJECTILE_Y = 500;
 	public static int PROJECTILE_VELOCITY_X = 0;

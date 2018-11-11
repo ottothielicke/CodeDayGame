@@ -3,6 +3,8 @@ import java.awt.event.KeyEvent;
 
 import main.characters.PlayerOne;
 import main.characters.PlayerTwo;
+import main.characters.projectiles.ProjectileOne;
+import main.frames.containers.MainPanel;
 import main.interfaces.*;
 public class KeyListener implements KeyEventListener{
 
@@ -10,7 +12,8 @@ public class KeyListener implements KeyEventListener{
 	public void keyTyped(KeyEvent e) {
 		
 	}
-
+	public static int start = 1;
+	public static int startSecond = 1;
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
@@ -33,7 +36,50 @@ public class KeyListener implements KeyEventListener{
 		} else if (keyCode == KeyEvent.VK_DOWN) {
 			PlayerTwo.VelY = 2;
 		} 
-		
+		if(start == 1 && keyCode == KeyEvent.VK_NUMPAD2 || start == 1 && keyCode == KeyEvent.VK_NUMPAD4 || start == 1 && keyCode == KeyEvent.VK_NUMPAD6 || start == 1 && keyCode == KeyEvent.VK_NUMPAD8) {
+			start = 0;
+			ProjectileMovementListener.projectileFollow = false;
+			MainPanel.drawProjectileOne = true;
+			if(keyCode == KeyEvent.VK_NUMPAD6) {
+				
+				ProjectileOne.PROJECTILE_VELOCITY_X = 2;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 0;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD8) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = 0;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = -2;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD4) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = -2;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 0;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD2) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = 0;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 2;
+			}
+		}
+		if(startSecond == 1 && keyCode == KeyEvent.VK_NUMPAD2 || startSecond == 1 && keyCode == KeyEvent.VK_NUMPAD4 || startSecond == 1 && keyCode == KeyEvent.VK_NUMPAD6 || startSecond == 1 && keyCode == KeyEvent.VK_NUMPAD8) {
+			startSecond = 0;
+			ProjectileMovementListener.projectileFollow = false;
+			MainPanel.drawProjectileOne = true;
+			if(keyCode == KeyEvent.VK_NUMPAD6) {
+				
+				ProjectileOne.PROJECTILE_VELOCITY_X = 2;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 0;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD8) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = 0;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = -2;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD4) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = -2;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 0;
+			}
+			else if(keyCode == KeyEvent.VK_NUMPAD2) {
+				ProjectileOne.PROJECTILE_VELOCITY_X = 0;
+				ProjectileOne.PROJECTILE_VELOCITY_Y = 2;
+			}
+		}
 	}
 
 	@Override
